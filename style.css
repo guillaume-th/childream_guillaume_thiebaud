@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  padding-top: 2%;
+  padding-bottom: 4%;
+  width: 40%;
+  height: 40%;
+}
+.recette {
+  display: flex;
+}
+.AjoutRecette {
+  padding-left: 3%;
+  margin-right: 3%;
+  min-width: 50%;
+  background-color: white;
+  box-shadow: 8px 8px 8px 8px gray;
+}
+.VotreRecette {
+  text-align: center;
+}
+span{
+    cursor: pointer;
+    margin: 0.5%;
+}
+.choix{
+    padding: 1%;
+    margin: 1%;
+    width: 1%;
+    background-color: gray;
+}
+.ChoixIngredient{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.count{
+    padding: 1%;
+    margin: 1%;
+    width: 1%;
+}
+#result{
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
