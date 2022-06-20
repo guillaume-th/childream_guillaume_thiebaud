@@ -16,6 +16,7 @@ header {
   padding-left: 3%;
   margin-right: 3%;
   min-width: 50%;
+  height: max-content;
   background-color: white;
   box-shadow: 8px 8px 8px 8px gray;
 }
@@ -39,7 +40,8 @@ span{
 }
 .count{
     padding: 1%;
-    margin: 1%;
+    margin-left: 1.1%;
+    margin-right: 1.1%;
     width: 1%;
 }
 #result{
@@ -47,4 +49,32 @@ span{
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+#ingredient{
+width: 80%;
+background-color: lightgray;
+margin-left: 2%;
+margin-right: 2%;
+}
+#UrlImage{
+  width: 80%;
+  background-color: lightgray;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.submit{
+  margin: 2%;
+  padding: 1%;
+  background-color: lightgreen;
+}
+.verif{
+  margin: 2%;
+  padding: 1%;
+  background-color: lightgreen;
+}
+.CountIngredient{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10%;
 }
