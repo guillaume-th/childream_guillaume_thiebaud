@@ -41,14 +41,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
   for (let i = 0; i < document.getElementsByTagName("span").length; i++) {
-    document
-      .getElementsByTagName("span")
-    [i].addEventListener("click", function (e) {
-      for (
-        let y = 0;
-        y < document.getElementsByClassName("choix").length;
-        y++
-      ) {
+    document.getElementsByTagName("span")[i].addEventListener("click", function (e) {
+      for (let y = 0;y < document.getElementsByClassName("choix").length;y++) {
         var element = document.getElementsByClassName("choix")[y];
         if (element.textContent == e.target.textContent) {
           countFood[y]++;
@@ -87,9 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
           var ResultName = document.createElement("p");
           var ResultImg = document.createElement("img");
           var resultcontentName = document.createTextNode(platArray[index][0]);
-          var resultcontentbravo = document.createTextNode(
-            "Bravo Vous venez de préparer"
-          );
+          var resultcontentbravo = document.createTextNode("Bravo Vous venez de préparer");
           ResultImg.src = platArray[index][2];
           bravo.appendChild(resultcontentbravo);
           ResultName.appendChild(resultcontentName);
@@ -97,40 +89,25 @@ window.addEventListener("DOMContentLoaded", () => {
           ResultatFinal.appendChild(ResultName);
           ResultatFinal.appendChild(ResultImg);
         } else {
-          if (index == platArray.length) {
+          if (index == platArray.length-1) {
             alert("cette recette n'existe pas ou ce n ai pas le bonne ordre");
           }
         }
       }
-      for (
-        let index = 0;
-        index < document.getElementsByClassName("count").length;
-        index++
-        ) {
+      food = [];
+      countFood = [0, 0, 0];
+      for (let index = 0;index < document.getElementsByClassName("count").length;index++){
+        
         if (document.getElementsByClassName("count")[index].lastChild) {
-          document
-            .getElementsByClassName("count")
-          [index].removeChild(
-            document.getElementsByClassName("count")[index].lastChild
-          );
+          document.getElementsByClassName("count")[index].removeChild(document.getElementsByClassName("count")[index].lastChild);
           document.getElementsByClassName("count")[
             index
           ].style.backgroundColor = "white";
         }
       }
-      for (
-        let index = 0;
-        index < document.getElementsByClassName("choix").length;
-        index++
-      ) {
-        document
-          .getElementsByClassName("choix")
-        [index].removeChild(
-          document.getElementsByClassName("choix")[index].lastChild
-        );
+      for (let index = 0;index < document.getElementsByClassName("choix").length;index++) {
+        document.getElementsByClassName("choix")[index].removeChild(document.getElementsByClassName("choix")[index].lastChild);
       }
     }
-    countFood = [0, 0, 0];
-    food = [];
   });
 });
