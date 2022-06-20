@@ -26,6 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
       platArray.push([NomRecette, ingredient, image]);
       var newDiv = document.createElement("div");
+      var newDiv2 = document.createElement("div");
       var newNom = document.createElement("p");
       var newRecette = document.createElement("p");
       var newImg = document.createElement("img");
@@ -34,9 +35,12 @@ window.addEventListener("DOMContentLoaded", () => {
       var newContentI = document.createTextNode(ingredient);
       newNom.appendChild(newContentN);
       newRecette.appendChild(newContentI);
-      newDiv.appendChild(newNom);
-      newDiv.appendChild(newRecette);
+      newDiv2.appendChild(newNom);
+      newDiv2.appendChild(newRecette);
+      newDiv2.classList.add("BoxInRecette");
+      newDiv.appendChild(newDiv2);
       newDiv.appendChild(newImg);
+      newDiv.classList.add("BoxRecette");
       ListeRecette.appendChild(newDiv);
     }
   });
